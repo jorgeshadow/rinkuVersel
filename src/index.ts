@@ -12,7 +12,7 @@ class Server{
     onConfig():void{
         this.app.set('port',process.env.PORT || 2100)
         this.app.use(express.json());
-        this.app.use(cors('Access-Control-Allow-Origin','localhost:4200',
+        this.app.use(cors('Access-Control-Allow-Origin','https://rinkunominas.web.app',
         'Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
         'Access-Control-Allow-Headers', 'X-Requested-With,content-type',
         'Access-Control-Allow-Credentials', true));
