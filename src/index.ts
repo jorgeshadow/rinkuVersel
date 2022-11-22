@@ -12,7 +12,9 @@ class Server{
     onConfig():void{
         this.app.set('port',process.env.PORT || 2100)
         this.app.use(express.json());
-        this.app.use(cors());
+        this.app.use(cors('Access-Control-Allow-Credentials', true,
+        'Access-Control-Allow-Origin', '*','Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT','Access-Control-Allow-Headers',
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'));
         this.app.use(express.urlencoded({extended:false}))
     }
     onRoutes():void{
