@@ -36,8 +36,7 @@ async getempleados(req:Request,res:Response):Promise<any>{
   res.json(resp)
 }
 async getempleado(req:Request,res:Response):Promise<any>{
-  const params=req.params; 
-  console.log(params)
+  const params=req.params;  
   const resp =await pool.query(
       `SELECT 
       *
@@ -96,8 +95,7 @@ async deletenominas(req:Request,res:Response):Promise<any>{
   res.json(resp)
 }
 async updateempleado(req:Request,res:Response):Promise<any>{
-  const params=req.body;  
-  console.log(params)
+  const params=req.body;   
   const resp =await pool.query(
       `UPDATE 
       public."Usuarios" 
@@ -112,8 +110,7 @@ async updateempleado(req:Request,res:Response):Promise<any>{
   res.json(resp)
 } 
 async postnomina(req:Request,res:Response):Promise<any>{
-  const params=req.body;
-  console.log(params)
+  const params=req.body; 
   const resp =await pool.query(
       `INSERT INTO 
       public."Nominas"
